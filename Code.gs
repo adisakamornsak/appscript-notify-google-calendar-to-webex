@@ -3,7 +3,7 @@ function getTodayEvents() {
   const startOfDay = new Date(today.setHours(0, 0, 0, 0));
   const endOfDay = new Date(today.setHours(23, 59, 59, 999));
   
-  webexRoomId = 'YOUR_WEBEX_ROOM_ID';
+  const webexRoomId = 'YOUR_WEBEX_ROOM_ID';
 
   const calendarId = 'YOUR_GOOGLE_CALENDAR_ID@group.calendar.google.com';
   const calendar = CalendarApp.getCalendarById(calendarId);
@@ -67,9 +67,9 @@ function isAllDayEvent(event) {
   return isStartMidnight && isEndMidnight && isFullDayDuration;
 }
 
-function callWebexBotAPI(roomId,text) {
-  var url = 'https://webexapis.com/v1/messages';
-  var bearerToken = 'YOUR_WEBEX_ACCESS_TOKEN';
+function callWebexBotAPI(roomId, text) {
+  const url = 'https://webexapis.com/v1/messages';
+  const bearerToken = 'YOUR_WEBEX_ACCESS_TOKEN';
   var payload = {
     "roomId": roomId,
     "text": text
