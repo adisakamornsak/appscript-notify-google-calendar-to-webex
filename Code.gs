@@ -28,8 +28,8 @@ function getTodayEvents() {
        if (isAllDay) {
           timeDisplay = 'ทั้งวัน';
           } else {
-          const startTime = event.getStartTime().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-          const endTime = event.getEndTime().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+          const startTime = event.getStartTime().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' });
+          const endTime = event.getEndTime().toLocaleTimeString([], { hour12: false, hour: '2-digit', minute: '2-digit' });
           timeDisplay = `${startTime} - ${endTime}`;
         }
 
