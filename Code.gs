@@ -43,7 +43,9 @@ function getTodayEvents() {
     
     messageText += `********************`
     Logger.log(messageText);
-    callWebexBotAPI(webexRoomId,messageText)
+    if(messageText != `********************`){
+      callWebexBotAPI(webexRoomId,messageText)
+    }
   }
 }
 
